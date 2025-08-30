@@ -1,0 +1,15 @@
+services:
+  dev:
+    container_name: "vite-dev"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+  prod:
+    container_name: "vite-prod"
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "5174:80"
