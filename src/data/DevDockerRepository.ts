@@ -10,8 +10,7 @@ export class DevDockerRepository implements DockerRepository {
     console.log(
       `Creating Docker Dev Repository #${this.ownCount}! I'm being lazily initialized!`,
     );
-    console.log("Are we even in the products route?");
-    console.log("If we're in /, this is bad news!");
+    console.log("We are in the products route!");
   }
 
   greet(from: string) {
