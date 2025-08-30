@@ -1,6 +1,6 @@
-import type { DockerRepository } from "../../../data/DockerRepository.ts";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import type { DockerRepository } from "../../../domain/DockerRepository.ts";
 
 interface CarProductsProps {
   dockerRepository: DockerRepository;

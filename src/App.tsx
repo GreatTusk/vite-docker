@@ -4,16 +4,16 @@ import { Vite } from "./ui/pages/Vite.tsx";
 import { CarProducts } from "./ui/pages/products/CarProducts.tsx";
 import { BikeProducts } from "./ui/pages/products/BikeProducts.tsx";
 import {
-  DefaultModule,
+  DefaultProductModule,
   type ProductModule,
-} from "./ui/pages/products/di/ProductModule.ts";
+} from "./di/ProductModule.ts";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Vite />} />
-        {ProductsRoute(DefaultModule)}
+        {ProductsRoute(DefaultProductModule)}
       </Routes>
     </BrowserRouter>
   );
