@@ -8,12 +8,12 @@ interface BikeProductsProps {
 
 export function BikeProducts({ dockerRepository }: BikeProductsProps) {
   useEffect(() => {
-    dockerRepository.greet();
+    dockerRepository.greet("bikes");
   }, [dockerRepository]);
   return (
     <div>
       <h2>Bikes</h2>
-      <Link to="/products">Go to products</Link>
+      <Link to="/products/cars">Go to cars</Link>
       <Link to="/">Go home</Link>
       <ul>
         <li>Yamaha</li>

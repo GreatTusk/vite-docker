@@ -8,7 +8,7 @@ interface CarProductsProps {
 
 export function CarProducts({ dockerRepository }: CarProductsProps) {
   useEffect(() => {
-    dockerRepository.greet();
+    dockerRepository.greet("cars");
   }, [dockerRepository]);
   return (
     <div>

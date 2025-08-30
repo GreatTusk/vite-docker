@@ -1,3 +1,3 @@
 export abstract class DockerRepository {
-  abstract greet(): void;
+  abstract greet(from: string): void;
 }

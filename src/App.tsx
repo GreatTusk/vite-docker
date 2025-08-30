@@ -23,7 +23,7 @@ function ProductsRoute({ dockerRepository }: ProductModule) {
   return (
     <>
       <Route
-        path="/products"
+        path="/products/cars"
         element={<CarProducts dockerRepository={dockerRepository} />}
       />
       <Route
