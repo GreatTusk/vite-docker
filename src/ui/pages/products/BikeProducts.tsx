@@ -1,12 +1,9 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import type { DockerRepository } from "../../../domain/DockerRepository.ts";
+import { useProductModule } from "./di/DueDiligenceModuleProvider.tsx";
 
-interface BikeProductsProps {
-  dockerRepository: DockerRepository;
-}
-
-export function BikeProducts({ dockerRepository }: BikeProductsProps) {
+export function BikeProducts() {
+  const { dockerRepository } = useProductModule();
   useEffect(() => {
     dockerRepository.greet("bikes");
   }, [dockerRepository]);

@@ -21,7 +21,8 @@ export function Vite() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <Link to="/products">Go to products</Link>
+        <Link to="/products/cars">Go to cars</Link>
+        <Link to="/products/bikes">Go to bikes</Link>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>

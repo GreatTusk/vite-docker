@@ -1,12 +1,10 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import type { DockerRepository } from "../../../domain/DockerRepository.ts";
+import { useProductModule } from "./di/DueDiligenceModuleProvider.tsx";
 
-interface CarProductsProps {
-  dockerRepository: DockerRepository;
-}
+export function CarProducts() {
+  const { dockerRepository } = useProductModule();
 
-export function CarProducts({ dockerRepository }: CarProductsProps) {
   useEffect(() => {
     dockerRepository.greet("cars");
   }, [dockerRepository]);
