@@ -1,13 +1,13 @@
 import { createContext, type ReactNode, useContext, useMemo } from "react";
 
 export interface ModuleConfig<T> {
-  mock: () => T;
+  mock?: () => T;
   production: () => T;
 }
 
 export interface ModuleProviderProps<T> {
   children: ReactNode;
-  config?: "mock" | "production" | T;
+  config?: "mock" | "production";
   moduleConfig: ModuleConfig<T>;
   displayName: string;
 }
@@ -24,12 +24,9 @@ export function createModuleProvider<T>() {
     const services = useMemo(() => {
       console.log(`Instantiating ${displayName} module services`);
 
-      if (typeof config === "object") {
-        return config;
-      }
-
       switch (config) {
         case "mock":
+          if (!moduleConfig.mock) throw new Error("No mock config provided");
           return moduleConfig.mock();
         case "production":
         default:

@@ -8,7 +8,7 @@ export class DevDockerRepository implements DockerRepository {
     DevDockerRepository.instanceCount++;
     this.ownCount = DevDockerRepository.instanceCount;
     console.log(
-      `Creating Docker Dev Repository n${this.ownCount}! I'm being eagerly initialized!`,
+      `Creating Docker Dev Repository #${this.ownCount}! I'm being lazily initialized!`,
     );
     console.log("Are we even in the products route?");
     console.log("If we're in /, this is bad news!");
@@ -16,7 +16,7 @@ export class DevDockerRepository implements DockerRepository {
 
   greet(from: string) {
     console.log(
-      `Greeting from Dev Docker Repository n${this.ownCount}, ${from}!`,
+      `Greeting from Dev Docker Repository #${this.ownCount}, ${from}!`,
     );
   }
 }
