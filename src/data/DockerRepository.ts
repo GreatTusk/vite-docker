@@ -5,7 +5,9 @@ export class DockerRepository {
   constructor() {
     DockerRepository.instanceCount++;
     this.ownCount = DockerRepository.instanceCount;
-    console.log("Creating Docker Repository!");
+    console.log("Creating Docker Repository! I'm being eagerly initialized!");
+    console.log("Are we even in the products route?");
+    console.log("If we're in /, this is bad news!");
   }
 
   greet() {
