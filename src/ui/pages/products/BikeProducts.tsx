@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useProductModule } from "./di/DueDiligenceModuleProvider.tsx";
+import { useProductModule } from "../../../di/DueDiligenceModuleProvider.tsx";
 
 export function BikeProducts() {
   const { dockerRepository } = useProductModule();

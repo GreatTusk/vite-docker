@@ -1,21 +1,21 @@
 import {
   createModuleProvider,
   type ModuleConfig,
-} from "../../../../shared/ModuleProvider.tsx";
+} from "../shared/ModuleProvider.tsx";
 import type { ProductModule } from "./ProductModule.ts";
 import type { ReactNode } from "react";
-import { DevDockerRepository } from "../../../../data/DevDockerRepository.ts";
-import { ProdDockerRepository } from "../../../../data/ProdDockerRepository.ts";
-import { IS_PROD } from "../../../../shared/Enviroment.ts";
+import { DevProductRepository } from "../data/DevProductRepository.ts";
+import { ProdProductRepository } from "../data/ProdProductRepository.ts";
+import { IS_PROD } from "../shared/Enviroment.ts";
 
 const { ModuleProvider, useModule } = createModuleProvider<ProductModule>();
 
 const productModuleConfig: ModuleConfig<ProductModule> = {
   mock: () => ({
-    dockerRepository: new DevDockerRepository(),
+    dockerRepository: new DevProductRepository(),
   }),
   production: () => ({
-    dockerRepository: new ProdDockerRepository(),
+    dockerRepository: new ProdProductRepository(),
   }),
 };
 

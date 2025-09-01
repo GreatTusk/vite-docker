@@ -1,4 +1,4 @@
-import { ProductModuleProvider } from "./di/DueDiligenceModuleProvider.tsx";
+import { ProductModuleProvider } from "../../../di/DueDiligenceModuleProvider.tsx";
 import { Route, Routes } from "react-router-dom";
 import { CarProducts } from "./CarProducts.tsx";
 import { BikeProducts } from "./BikeProducts.tsx";
