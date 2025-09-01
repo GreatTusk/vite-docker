@@ -1,17 +1,17 @@
-import type { DockerRepository } from "../domain/DockerRepository.ts";
-import { ProdDockerRepository } from "../data/ProdDockerRepository.ts";
-import { DevDockerRepository } from "../data/DevDockerRepository.ts";
+import { ProdProductRepository } from "../data/ProdProductRepository.ts";
+import { DevProductRepository } from "../data/DevProductRepository.ts";
+import type { ProductRepository } from "../domain/ProductRepository.ts";
 
 export interface ProductModule {
-  dockerRepository: DockerRepository;
+  productRepository: ProductRepository;
 }
 
 const ProdModule: ProductModule = {
-  dockerRepository: new ProdDockerRepository(),
+  productRepository: new ProdProductRepository(),
 };
 
 const DevModule: ProductModule = {
-  dockerRepository: new DevDockerRepository(),
+  productRepository: new DevProductRepository(),
 };
 
 export const DefaultProductModule: ProductModule = import.meta.env.PROD

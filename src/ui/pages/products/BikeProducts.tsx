@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import type { DockerRepository } from "../../../domain/DockerRepository.ts";
+import type { ProductRepository } from "../../../domain/ProductRepository.ts";
 
 interface BikeProductsProps {
-  dockerRepository: DockerRepository;
+  productRepository: ProductRepository;
 }
 
-export function BikeProducts({ dockerRepository }: BikeProductsProps) {
+export function BikeProducts({ productRepository }: BikeProductsProps) {
   useEffect(() => {
-    dockerRepository.greet("bikes");
-  }, [dockerRepository]);
+    productRepository.greet("bikes");
+  }, [productRepository]);
   return (
     <div>
       <h2>Bikes</h2>

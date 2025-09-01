@@ -19,16 +19,16 @@ function App() {
   );
 }
 
-function ProductsRoute({ dockerRepository }: ProductModule) {
+function ProductsRoute({ productRepository }: ProductModule) {
   return (
     <>
       <Route
         path="/products/cars"
-        element={<CarProducts dockerRepository={dockerRepository} />}
+        element={<CarProducts productRepository={productRepository} />}
       />
       <Route
         path="/products/bikes"
-        element={<BikeProducts dockerRepository={dockerRepository} />}
+        element={<BikeProducts productRepository={productRepository} />}
       />
     </>
   );

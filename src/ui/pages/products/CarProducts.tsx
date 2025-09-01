@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import type { DockerRepository } from "../../../domain/DockerRepository.ts";
+import type { ProductRepository } from "../../../domain/ProductRepository.ts";
 
 interface CarProductsProps {
-  dockerRepository: DockerRepository;
+  productRepository: ProductRepository;
 }
 
-export function CarProducts({ dockerRepository }: CarProductsProps) {
+export function CarProducts({ productRepository }: CarProductsProps) {
   useEffect(() => {
-    dockerRepository.greet("cars");
-  }, [dockerRepository]);
+    productRepository.greet("cars");
+  }, [productRepository]);
   return (
     <div>
       <h2>Cars</h2>
